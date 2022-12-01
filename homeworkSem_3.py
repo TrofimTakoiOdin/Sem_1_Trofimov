@@ -7,8 +7,8 @@ import sys
 def main():
     while True:
         print("Добро пожаловать в меню!")
-        time.sleep(2)
-        print("Выберите задачу 1 -5")
+        time.sleep(1)
+        print("Выберите задачу 1 - 5")
         time.sleep(1)
         userIn = inInt("Введите номер задачи: ")
 
@@ -83,6 +83,7 @@ def main():
             userExit()
 
 
+# Вспомогательная функция
 def userExit():
     print("Вернуться в меню? Y/N ")
     userIn = input(">> ")
@@ -92,6 +93,7 @@ def userExit():
         sys.exit()
 
 
+# Вспомогательная функция
 def inInt(text):
     while True:
         try:
@@ -100,6 +102,7 @@ def inInt(text):
         except ValueError:
             print("Введите число!")
 
+# Задача 1
 def listPairSum():
     k, total = [random.randint(1,  10) for i in range(10)], 0
     print("Исходный список: ", k)
@@ -108,6 +111,7 @@ def listPairSum():
     return total
 
 
+# Задача 2
 def pairOfListSum(lst):
     temp, temp2, prod, res = 0, 0, 0, []
     while lst:
@@ -121,6 +125,7 @@ def pairOfListSum(lst):
     return res
 
 
+# Задача 3
 def minMaxFractionsDiff(lst):
     # Ищем числа в списке по принципу наименьшей и наибольшей дробной части, исп. lambda
 
@@ -134,6 +139,7 @@ def minMaxFractionsDiff(lst):
     print(f"Искомое значение: {a} - {b } = {res}")
 
 
+# Задача 4
 def convertDecimalToBinary(num):
     res = []
     while num != 1:
@@ -144,6 +150,7 @@ def convertDecimalToBinary(num):
     return res
 
 
+# Задача 5
 def fibonacci(num):
     fib1, fib2 = 0, 1
     lst = [0]
