@@ -49,6 +49,8 @@ def userExit():
         return True
     else:
         sys.exit()
+
+
 def inputNum(text):
     while True:
         try:
